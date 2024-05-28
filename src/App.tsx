@@ -1,4 +1,7 @@
 import './App.css';
+import A from './components/Context/A';
+import UseRef from './components/UseRef';
+// import UseEffect from './components/UseEffect';
 // import FeedbackForm1 from './components/FeedbackForm1';
 // import Form from './components/Form';
 // import WrapMemo from './components/memo/Wrap';
@@ -6,7 +9,9 @@ import './App.css';
 // import NameForm from './components/NameForm';
 // import Panel from './components/Panel';
 import SyncedInputs from './components/SyncedInputs';
+import useTheme from './hooks/useTheme';
 function App() {
+  const { theme, toggleTheme } = useTheme();
   const [isFancy, setIsFancy] = useState(false);
   return (
     <>
@@ -18,9 +23,15 @@ function App() {
       <SyncedInputs />
       {/* <Counter />
       <Counter /> */}
-
+  {/* <UseEffect /> */}
+  <A />
+  <UseRef />
       <div>
         {isFancy ? <div><Counter isFancy={true} /></div> : <Counter isFancy={false} />}
+        <div>
+          <button onClick={toggleTheme}>切换主题</button>
+          <div className={theme}>当前主题：{theme}</div>
+        </div>
         <label>
           <input
             type="checkbox"
