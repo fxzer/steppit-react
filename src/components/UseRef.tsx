@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 
-export default function UseRef() {
+export default function UseRef({children}) {
+  console.log('[ children ]-4', children)
   const myInputRef = useRef(null);
 
   useEffect(() => {

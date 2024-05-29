@@ -1,6 +1,7 @@
 import './App.css';
 import A from './components/Context/A';
 import UseRef from './components/UseRef';
+import State01 from './components/use_state/01.base';
 // import UseEffect from './components/UseEffect';
 // import FeedbackForm1 from './components/FeedbackForm1';
 // import Form from './components/Form';
@@ -26,6 +27,7 @@ function App() {
   {/* <UseEffect /> */}
   <A />
   <UseRef />
+  <State01 />
       <div>
         {isFancy ? <div><Counter isFancy={true} /></div> : <Counter isFancy={false} />}
         <div>
@@ -47,6 +49,7 @@ function App() {
   );
 }
 import { useState } from 'react';
+import State from './components/use_state/01.base';
 
 // export default function App() {
 //   return (
